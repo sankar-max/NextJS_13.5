@@ -14,7 +14,8 @@
 
 # production
 /build
-
+/prettier.config.js
+/yarn.lock
 # misc
 .DS_Store
 *.pem
