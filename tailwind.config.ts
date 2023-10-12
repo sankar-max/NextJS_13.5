@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import colors from "tailwindcss/colors";
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,16 +13,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily: {
-        sans: ["Rajdhani", "sans-serif"],
-      },
-      colors: {
-        "primary-100": "#A3DEFF",
-        "primary-200": "#67A8E9",
-        "primary-300": "#202740",
-        "primary-400": "#343E66",
-        "primary-900": "#141728",
-      },
+      colors: { primaryBg: "#00478F", primary: "#0066CC", secondary: "#" },
     },
   },
   plugins: [require("@tailwindcss/typography")],
