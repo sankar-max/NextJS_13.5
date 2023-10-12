@@ -10,6 +10,7 @@ function AuthSession() {
       <>
         {session?.user?.name} <br />
         <button onClick={() => signOut()}>Sign Out</button>
+        <Link href={"/app/serverAction"}>navigate to ServerAction</Link>
       </>
     );
   }

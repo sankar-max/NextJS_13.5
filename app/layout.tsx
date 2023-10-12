@@ -20,9 +20,11 @@ export default async function RootLayout({
   const session = await getServerSession();
   return (
     <html lang="en">
-      <body className={inter.className + " bg-primaryBg"}>
+      <body className={inter.className + "bg-background"}>
         <SessionProvider session={session}>
-          <Nav />
+          <main>
+            <Nav />
+          </main>
           {children}
         </SessionProvider>
       </body>

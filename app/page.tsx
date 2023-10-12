@@ -7,10 +7,11 @@ import { getServerSession } from "next-auth";
 export const metadata: Metadata = {
   title: "sankar",
 };
-export default async function Home() {
+export default async function Home({ result }: any) {
   const { user } = (await getServerSession()) || {};
+
   return (
-    <div className="">
+    <div className=" text-primary">
       getServerSession
       {user ? <h1>{user?.name} Logged</h1> : <h1>not logged yet</h1>}
       <Image
@@ -20,6 +21,19 @@ export default async function Home() {
         height={140}
         className="rounded-full"
       />
+      <Link href={"/sankar"}>move</Link>
     </div>
   );
 }
+
+// export const getServerSideProps = async () => {
+//   const res = await axios.get("/app/api/register");
+//   const data = await res.data;
+//   console.log(data);
+//   const result = data.data;
+//   return {
+//     props: {
+//       result,
+//     },
+//   };
+// };
