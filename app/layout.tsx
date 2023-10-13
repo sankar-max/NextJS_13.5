@@ -2,8 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { getServerSession } from "next-auth";
-import SessionProvider from "@/app/components/session";
-import Nav from "./components/nav";
+import SessionProvider from "@/app/components/SessionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,10 +21,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className + "bg-background"}>
         <SessionProvider session={session}>
-          <main>
-            <Nav />
-          </main>
-          {children}
+          <main>{children}</main>
         </SessionProvider>
       </body>
     </html>

@@ -25,15 +25,3 @@ export default async function Home({ result }: any) {
     </div>
   );
 }
-
-// export const getServerSideProps = async () => {
-//   const res = await axios.get("/app/api/register");
-//   const data = await res.data;
-//   console.log(data);
-//   const result = data.data;
-//   return {
-//     props: {
-//       result,
-//     },
-//   };
-// };
